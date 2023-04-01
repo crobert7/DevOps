@@ -23,13 +23,13 @@ jobs:
     needs: [firstjob]
     runs-on: ubuntu-latest
     steps:
-    - name: First Chambita Step
+    - name: First step of second chambita
       run: date
   thirdjob: 
     name: Third Chambita
     runs-on: macos-12
     steps:
-    - name: First Step chambita
+    - name: First step of third chambita
       run: |
         touch test.txt
         echo 'friday night before go to sleep' >> test.txt
