@@ -17,4 +17,21 @@ jobs:
         touch new.yaml
         echo 'this is my first chambita' >> new.yaml
         cat new.yaml
-        pwd
+        pwd     
+  secondjob:
+    name: Second Chambita
+    needs: [firstjob]
+    runs-on: ubuntu-latest
+    steps:
+    - name: First Chambita Step
+      run: date
+  thirdjob: 
+    name: Third Chambita
+    runs-on: macos-12
+    steps:
+    - name: First Step chambita
+      run: |
+        touch test.txt
+        echo 'friday night before go to sleep' >> test.txt
+        cat test.txt
+      
